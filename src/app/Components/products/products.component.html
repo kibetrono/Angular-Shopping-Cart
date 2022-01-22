@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="card-header d-flex header">
+<div class="item">
+    <a href="https://pixabay.com/photos/search/all%20products/">
+        <img src="./assets/Screenshot from 2022-01-22 12-56-04.png" alt="">
+        <h5>All Products</h5>
+    </a>
+</div>
+<div class="item">
+    <a href="https://pixabay.com/images/search/fashions/">
+        <img src="./assets/woman-ge6e2dc321_1920.jpg" alt="">
+        <h5>Fashions</h5>
+    </a>
+</div>
+<div class="item">
+    <a href="https://pixabay.com/images/search/hardware/">
+        <img src="./assets/network-cable-g5fc5ce966_1920.jpg" alt="">
+        <h5>Networking</h5>
+    </a>
+</div>
+<div class="item">
+    <a href="https://pixabay.com/images/search/electronics/">
+        <img src="./assets/apple-g730b53982_1920.jpg" alt="">
+        <h5>Electronics</h5>
+    </a>
+</div>
+<div class="item">
+    <a href="https://pixabay.com/images/search/utensils/">
+        <img src="./assets/retro-g9f3ad73e6_1920.jpg" alt="">
+        <h5>Utensils</h5>
+    </a>
+</div>
+<div class="item">
+    <a href="https://pixabay.com/images/search/vehicles/">
+        <img src="./assets/aston-martin-gdfe97f9c8_1920.jpg" alt="">
+        <h5>Brand Vehicles</h5>
+    </a>
+</div>
+
+    </div>
+    
+
+    <div class="card-body ">
+
+        <div class="container main">
+            <div class="row " >
+                <div class="col-md-4 " *ngFor="let product of allProducts" id="prod">
+                    
+                        <img src="{{product.image}}" alt="">
+                        <h4 id="title">{{product.title}}</h4>
+                        <p id="description">{{product.description}}</p>
+                        <p>
+                            <cite>  Price: ${{product.price}}</cite>
+                            
+                          </p>
+                        <button class="btn btn-primary" (click)="addToCart(product)">Add Cart</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
